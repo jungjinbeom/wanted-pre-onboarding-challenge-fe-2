@@ -6,7 +6,7 @@
  * @param {string} category - 카테고리
  * @param {string[]} [tag] - 태그
  */
-function addTodo() {}
+function addTodo({ content, category, tag }) {}
 
 /**
  * 모든 할 일을 조회할 수 있다.
@@ -15,11 +15,11 @@ function addTodo() {}
  * @param {number} id - 아이디
  *
  */
-function getTodo() {}
+function getTodo({ id }) {}
 
 /**
  * ID를 제외한 모든 속성을 수정할 수 있다.
- * 특정 할 일의 트겅 태그를 수정할 수 있다.
+ * 특정 할 일의 특정 태그를 수정할 수 있다.
  *
  * @param {number} id - 아이디
  * @param {string} content - 내용
@@ -28,7 +28,7 @@ function getTodo() {}
  * @param {string[]} [tag] - 태그
  *
  */
-function updateTodo() {}
+function updateTodo({ id, content, category, isCompleted, tag }) {}
 
 /**
  * ID를 기반으로 특정 할 일을 삭제할 수 있다.
@@ -40,4 +40,4 @@ function updateTodo() {}
  * @param {string[]} [tag] - 태그
  *
  */
-function deleteTodo() {}
+function deleteTodo({ id, tag }) {}
