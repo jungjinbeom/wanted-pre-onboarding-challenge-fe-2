@@ -1,3 +1,11 @@
+interface Todo {
+  id: number;
+  content: string;
+  category: string;
+  tag?: string[];
+  isCompleted?: boolean;
+}
+
 /**
  * 할 일을 추가할 수 있다.
  * 내용없이 추가할 수 없다.
@@ -6,7 +14,7 @@
  * @param {string} category - 카테고리
  * @param {string[]} [tag] - 태그
  */
-function addTodo({ content, category, tag }) {}
+function addTodo(content: string, category: string, tag: string[]): void {}
 
 /**
  * 모든 할 일을 조회할 수 있다.
@@ -16,7 +24,9 @@ function addTodo({ content, category, tag }) {}
  * @param {number} id - 아이디
  * @returns {Todo[]} - Todo 목록 반환
  */
-function getTodo({ id }) {}
+function getTodo(id: string): Todo[] {
+  return [];
+}
 
 /**
  * ID를 제외한 모든 속성을 수정할 수 있다.
@@ -31,7 +41,7 @@ function getTodo({ id }) {}
  * @returns {Todo} - Todo 수정할일
  *
  */
-function updateTodo({ id, content, category, isCompleted, tag }) {}
+function updateTodo(todo: Todo) {}
 
 /**
  * ID를 기반으로 특정 할 일을 삭제할 수 있다.
@@ -44,4 +54,6 @@ function updateTodo({ id, content, category, isCompleted, tag }) {}
  * @param {string[]} [tag] - 태그
  * @returns {Todo[]} -삭제된 Todo를 제외한 나머지 목록을 반환
  */
-function deleteTodo({ id, tag }) {}
+function deleteTodo(id: number, tag: string[]) {
+  return [];
+}
